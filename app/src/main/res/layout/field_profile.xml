@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/firstLayout"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/fields_header">
+
+        <ImageView
+            android:id="@+id/prev"
+            android:layout_marginTop="10dp"
+            android:layout_alignParentTop="true"
+            android:layout_gravity="start"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/leftarrow"
+            android:adjustViewBounds="true"
+            />
+
+        <TextView
+            android:id="@+id/five_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="15dp"
+            android:gravity="center"
+            android:background="@color/t_black"
+            android:textSize="30dp"
+            android:textColor="@color/blue"
+            android:text="@string/fivename"
+        />
+
+        <RelativeLayout
+            android:id="@+id/field_stats"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:background="@color/t_black"
+            android:layout_centerVertical="true">
+
+            <TextView
+                android:id="@+id/middle"
+                android:layout_marginTop="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20dp"
+                android:layout_centerHorizontal="true"
+                android:layout_alignParentTop="true"
+                android:layout_above="@+id/middle_bar"
+                />
+
+            <TextView
+                android:id="@+id/waiting_matchs"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/middle"
+                android:layout_alignTop="@+id/middle"
+                android:text="@string/waiting_match"
+                android:gravity="center"
+                android:layout_marginLeft="15dp"
+                android:textColor="@color/light_gray"
+                android:textSize="12dp"
+                />
+
+            <TextView
+                android:id="@+id/matchs_done"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toLeftOf="@+id/middle"
+                android:layout_alignTop="@+id/middle"
+                android:text="@string/matchs_done"
+                android:gravity="center"
+                android:layout_marginRight="15dp"
+                android:textColor="@color/light_gray"
+                android:textSize="12dp"
+                />
+
+            <TextView
+                android:id="@+id/middle_bar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="|"
+                android:textColor="@color/white"
+                android:textSize="30dp"
+                android:layout_marginBottom="5dp"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                />
+
+            <TextView
+                android:id="@+id/number_waiting"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/middle_bar"
+                android:layout_alignTop="@+id/middle_bar"
+                android:text="999"
+                android:gravity="center"
+                android:layout_marginLeft="15dp"
+                android:textColor="@color/white"
+                android:textSize="30dp"
+                />
+
+            <TextView
+                android:id="@+id/number_matchs"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toLeftOf="@+id/middle_bar"
+                android:layout_alignTop="@+id/middle_bar"
+                android:text="999"
+                android:gravity="center"
+                android:layout_marginRight="15dp"
+                android:textColor="@color/white"
+                android:textSize="30dp"
+                />
+
+
+        </RelativeLayout>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="20dp"
+            android:textSize="15dp"
+            android:text="@string/reservate"
+            android:layout_centerHorizontal="true"
+            android:textColor="@color/white"
+            android:background="@color/t_black"/>
+
+        </RelativeLayout>
+
+    <ListView
+        android:id="@+id/listView"
+        android:layout_below="@+id/firstLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        />
+
+</RelativeLayout>
