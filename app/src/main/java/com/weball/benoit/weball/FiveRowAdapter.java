@@ -57,8 +57,8 @@ public class FiveRowAdapter extends ArrayAdapter<Five_Row>{
     //il ne reste plus qu'à remplir notre vue
     viewHolder.name.setText(five.getName());
     viewHolder.city.setText(five.getCity());
-
-    Picasso.with(getContext()).load(five.getPhoto().getUrl()).memoryPolicy(MemoryPolicy.NO_CACHE).fit().centerCrop().into(viewHolder.background);
+    if (!five.getPhoto().getUrl().isEmpty())
+        Picasso.with(getContext()).load(five.getPhoto().getUrl()).fit().centerCrop().into(viewHolder.background);
 
     return convertView;
     }

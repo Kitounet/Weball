@@ -16,7 +16,7 @@
 
     <style name="BackGroundImageView">
         <item name="android:alpha">1</item>
-        <item name="android:scaleType">fitEnd</item>
+        <item name="android:scaleType">fitXY</item>
     </style>
 
 </resources>
