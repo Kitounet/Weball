@@ -1,0 +1,327 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/user_profile_fragment"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/backgroundhome">
+
+    <RelativeLayout
+        android:id="@+id/first_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/t_black">
+
+        <ImageView
+            android:id="@+id/conf_img"
+            android:layout_width="20dp"
+            android:layout_centerVertical="true"
+            android:layout_height="20dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="15dp"
+            android:scaleType="fitXY"
+
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginStart="10dp"
+            android:src="@drawable/settings_image"/>
+
+
+        <ImageView
+            android:id="@+id/search_image"
+            android:layout_width="20dp"
+            android:layout_centerVertical="true"
+            android:layout_height="20dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="15dp"
+            android:scaleType="fitXY"
+
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginRight="10dp"
+            android:layout_marginEnd="10dp"
+            android:src="@drawable/searchicon"/>
+
+        <ImageView
+            android:id="@+id/picture_profile"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/search_image"
+            android:scaleType="fitXY"
+
+            android:layout_marginTop="5dp" />
+
+        <ImageView
+            android:id="@+id/add_friend_picture"
+            android:layout_width="30dp"
+            android:layout_alignBottom="@id/picture_profile"
+            android:layout_toRightOf="@id/picture_profile"
+            android:layout_toEndOf="@id/picture_profile"
+            android:layout_marginLeft="15dp"
+            android:layout_marginBottom="40dp"
+            android:layout_height="20dp"
+            android:scaleType="fitXY"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/add_picture"/>
+
+        <TextView
+            android:id="@+id/fullname_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/picture_profile"
+            android:layout_marginTop="5dp"
+            android:fontFamily="sans-serif-condensed"
+            android:textSize="15sp"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:text="Benoît Bizet"
+            />
+
+        <TextView
+            android:id="@+id/age_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/fullname_text"
+            android:layout_toEndOf="@id/fullname_text"
+            android:layout_marginLeft="5dp"
+            android:fontFamily="sans-serif-condensed"
+            android:layout_alignTop="@id/fullname_text"
+            android:textSize="15sp"
+            android:textColor="@color/white"
+            android:text="24 ans"/>
+
+
+        <TextView
+            android:id="@+id/city_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-condensed"
+            android:layout_below="@id/fullname_text"
+            android:layout_centerHorizontal="true"
+            android:textSize="12sp"
+            android:textColor="@color/white"
+            android:text="Strasbourg"/>
+
+
+        <TextView
+            android:id="@+id/matches_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/city_text"
+            android:layout_marginTop="15dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginStart="10dp"
+            android:fontFamily="sans-serif-condensed"
+            android:textSize="12sp"
+            android:textColor="@color/white"
+            android:text="@string/user_profile_matchs_text"
+            />
+
+
+        <TextView
+            android:id="@+id/teammates_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/city_text"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="15dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginEnd="10dp"
+            android:fontFamily="sans-serif-condensed"
+            android:textSize="12sp"
+            android:textColor="@color/white"
+            android:text="@string/user_profile_teammates_text"
+            />
+
+
+        <TextView
+            android:id="@+id/matchs_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/matches_text"
+
+            android:layout_alignLeft="@id/matches_text"
+            android:layout_alignStart="@id/matches_text"
+            android:fontFamily="sans-serif-condensed"
+            android:textSize="20sp"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:text="2042"
+            android:layout_marginBottom="5dp"
+
+            />
+
+
+        <TextView
+            android:id="@+id/teammates_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/teammates_text"
+
+            android:layout_alignLeft="@id/teammates_text"
+            android:layout_alignStart="@id/teammates_text"
+            android:fontFamily="sans-serif-condensed"
+            android:textSize="20sp"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:text="2042"
+            android:layout_marginBottom="5dp"
+
+            />
+
+   </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/second_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/t_black"
+        android:layout_marginTop="10dp"
+        android:layout_below="@id/first_layout">
+
+
+        <TextView
+            android:id="@+id/played_match_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="5dp"
+            android:textColor="@color/white"
+            android:textSize="15sp"
+            android:text="@string/user_profile_played_matchs"
+            android:fontFamily="sans-serif-condensed"
+
+            />
+
+
+        <lecho.lib.hellocharts.view.PieChartView
+            android:id="@+id/chart"
+            android:layout_below="@id/played_match_text"
+            android:layout_marginTop="5dp"
+            android:layout_centerHorizontal="true"
+            android:layout_width="100dp"
+            android:layout_height="100dp">
+        </lecho.lib.hellocharts.view.PieChartView>
+
+        <TextView
+            android:id="@+id/egality_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/chart"
+            android:textColor="@color/white"
+            android:textSize="12sp"
+            android:text="@string/user_profile_egality_text"/>
+
+        <lecho.lib.hellocharts.view.PieChartView
+            android:id="@+id/chart2"
+            android:layout_alignTop="@id/chart"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="10dp"
+            android:layout_width="100dp"
+            android:layout_height="100dp">
+        </lecho.lib.hellocharts.view.PieChartView>
+
+        <TextView
+            android:id="@+id/wins_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@id/egality_text"
+            android:layout_toStartOf="@id/egality_text"
+            android:layout_marginRight="80dp"
+            android:layout_marginEnd="80dp"
+            android:layout_below="@id/chart"
+            android:textColor="@color/white"
+            android:textSize="12sp"
+            android:text="@string/user_profile_wins_text"/>
+
+        <lecho.lib.hellocharts.view.PieChartView
+            android:id="@+id/chart3"
+            android:layout_alignTop="@id/chart"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:layout_width="100dp"
+            android:layout_height="100dp">
+        </lecho.lib.hellocharts.view.PieChartView>
+
+
+        <TextView
+            android:id="@+id/looses_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/egality_text"
+            android:layout_toEndOf="@id/egality_text"
+            android:layout_marginLeft="80dp"
+            android:layout_marginStart="80dp"
+            android:layout_below="@id/chart"
+            android:textColor="@color/white"
+            android:textSize="12sp"
+            android:text="@string/user_profile_looses_text"/>
+
+
+
+
+    </RelativeLayout>
+
+
+
+    <RelativeLayout
+        android:id="@+id/thirdlayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_below="@id/second_layout"
+        android:background="@color/t_black"
+        android:layout_marginBottom="10dp">
+
+    <TextView
+        android:id="@+id/next_match_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="5dp"
+        android:textColor="@color/white"
+        android:textSize="15sp"
+        android:text="@string/user_profile_next_match_text"
+        android:fontFamily="sans-serif-condensed"
+
+        />
+
+
+        <ImageView
+            android:id="@+id/hidden_add_match"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:visibility="gone"
+            android:layout_below="@id/next_match_text"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="10dp"
+            android:src="@drawable/add_match_picture"/>
+
+        <org.lucasr.twowayview.TwoWayView
+            android:id="@+id/lvItems"
+            style="@style/TwoWayView"
+            android:layout_below="@id/next_match_text"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:drawSelectorOnTop="false"
+            tools:context=".MainActivity"
+        />
+
+
+
+
+    </RelativeLayout>
+
+
+
+</RelativeLayout>

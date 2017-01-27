@@ -13,9 +13,19 @@
     <item name="darkgray" type="color">#424242</item>
     <item name="white" type="color">#FFFFFF</item>
     <item name="t_darkgray" type="color">#90424242</item>
-    <item name="t_white" type="color">#00000000</item>
+    <item name="t_white" type="color">#00FFFFFF</item>
     <item name="t_black" type="color">#90000000</item>
     <item name="light_gray" type="color">#d3d3d3</item>
+    <item name="black" type="color">#000000</item>
+    <item name="saumon" type="color">#FFA07A</item>
+    <item name="tab_gray" type="color">#3f3d41</item>
+    <item name="t_dark" type="color">#10030303</item>
+    <item name="t_apple_green" type="color">#907ed321</item>
+    <color name="colorPrimary">#2D8BD8</color>
+    <color name="colorPrimaryDark">#1D6BB8</color>
+    <color name="colorAccent">#C0E1FF</color>
+    <color name="MovieTitle">@android:color/black</color>
+    <color name="MovieYear">@android:color/darker_gray</color>
 
 
     <integer-array name="androidcolors">
@@ -34,6 +44,9 @@
         <item>@color/t_white</item>
         <item>@color/t_black</item>
         <item>@color/light_gray</item>
+        <item>@color/black</item>
+        <item>@color/saumon</item>
     </integer-array>
+
 
 </resources>

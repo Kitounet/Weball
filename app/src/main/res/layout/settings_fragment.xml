@@ -1,0 +1,345 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:background="@drawable/backgroundhome"
+    android:id="@+id/settings_fragment">
+
+    <RelativeLayout
+        android:id="@+id/header"
+        android:layout_alignParentTop="true"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/prev"
+            android:layout_marginTop="10dp"
+            android:layout_alignParentTop="true"
+            android:layout_gravity="start"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/leftarrow"
+            android:adjustViewBounds="true"
+            />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/account"
+        android:layout_marginTop="10dp"
+        android:layout_below="@id/header"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/label_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginLeft="5dp"
+            android:layout_marginStart="5dp"
+            android:textColor="@color/green"
+            android:text="@string/my_account"
+            android:fontFamily="sans-serif-condensed"
+            android:textSize="14sp"/>
+
+        <RelativeLayout
+            android:id="@+id/name_layout"
+            android:layout_below="@id/label_layout"
+            android:background="@color/t_darkgray"
+            android:layout_marginTop="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/label_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="7dp"
+                android:layout_marginBottom="7dp"
+                android:textColor="@color/white"
+                android:text="@string/fullname_label"
+                android:fontFamily="sans-serif-condensed"
+                android:textSize="16sp"/>
+
+
+            <ImageView
+                android:id="@+id/name_change_img"
+                android:layout_alignTop="@id/label_name"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:src="@drawable/rightarrow"
+                android:scaleType="fitXY"
+                android:adjustViewBounds="true"
+                />
+
+            <TextView
+                android:id="@+id/name"
+                android:layout_alignTop="@id/label_name"
+                android:layout_toLeftOf="@id/name_change_img"
+                android:layout_toStartOf="@id/name_change_img"
+                android:layout_width="wrap_content"
+                android:fontFamily="sans-serif-condensed"
+                android:textColor="@color/caldroid_middle_gray"
+                android:layout_height="wrap_content" />
+
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/email_layout"
+            android:layout_below="@id/name_layout"
+            android:background="@color/t_darkgray"
+            android:layout_marginTop="1dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/label_email"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="7dp"
+                android:layout_marginBottom="7dp"
+                android:textColor="@color/white"
+                android:text="@string/email_label"
+                android:fontFamily="sans-serif-condensed"
+                android:textSize="16sp"/>
+
+
+            <ImageView
+                android:id="@+id/email_change_img"
+                android:layout_alignTop="@id/label_email"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:src="@drawable/rightarrow"
+                android:scaleType="fitXY"
+                android:adjustViewBounds="true"
+                />
+
+            <TextView
+                android:id="@+id/email"
+                android:layout_alignTop="@id/label_email"
+                android:layout_toLeftOf="@id/email_change_img"
+                android:layout_toStartOf="@id/email_change_img"
+                android:layout_width="wrap_content"
+                android:fontFamily="sans-serif-condensed"
+                android:textColor="@color/caldroid_middle_gray"
+                android:layout_height="wrap_content" />
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/birthday_layout"
+            android:layout_below="@id/email_layout"
+            android:background="@color/t_darkgray"
+            android:layout_marginTop="1dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/label_birthday"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="7dp"
+                android:layout_marginBottom="7dp"
+                android:textColor="@color/white"
+                android:text="@string/birthday_label"
+                android:fontFamily="sans-serif-condensed"
+                android:textSize="16sp"/>
+
+
+            <ImageView
+                android:id="@+id/birthday_change_img"
+                android:layout_alignTop="@id/label_birthday"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:src="@drawable/rightarrow"
+                android:scaleType="fitXY"
+                android:adjustViewBounds="true"
+                />
+
+            <TextView
+                android:id="@+id/birthday"
+                android:layout_alignTop="@id/label_birthday"
+                android:layout_toLeftOf="@id/birthday_change_img"
+                android:layout_toStartOf="@id/birthday_change_img"
+                android:layout_width="wrap_content"
+                android:fontFamily="sans-serif-condensed"
+                android:textColor="@color/caldroid_middle_gray"
+                android:layout_height="wrap_content" />
+
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/city_layout"
+            android:layout_below="@id/birthday_layout"
+            android:background="@color/t_darkgray"
+            android:layout_marginTop="1dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/label_city"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="7dp"
+                android:layout_marginBottom="7dp"
+                android:textColor="@color/white"
+                android:text="@string/city_label"
+                android:fontFamily="sans-serif-condensed"
+                android:textSize="16sp"/>
+
+
+            <ImageView
+                android:id="@+id/city_change_img"
+                android:layout_alignTop="@id/label_city"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:src="@drawable/rightarrow"
+                android:scaleType="fitXY"
+                android:adjustViewBounds="true"
+                />
+
+            <TextView
+                android:id="@+id/city"
+                android:layout_alignTop="@id/label_city"
+                android:layout_toLeftOf="@id/city_change_img"
+                android:layout_toStartOf="@id/city_change_img"
+                android:layout_width="wrap_content"
+                android:fontFamily="sans-serif-condensed"
+                android:textColor="@color/caldroid_middle_gray"
+                android:layout_height="wrap_content" />
+
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/country_layout"
+            android:layout_below="@id/city_layout"
+            android:background="@color/t_darkgray"
+            android:layout_marginTop="1dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/label_country"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="7dp"
+                android:layout_marginBottom="7dp"
+                android:textColor="@color/white"
+                android:text="@string/label_country"
+                android:fontFamily="sans-serif-condensed"
+                android:textSize="16sp"/>
+
+
+            <ImageView
+                android:id="@+id/country_change_img"
+                android:layout_alignTop="@id/label_country"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:src="@drawable/rightarrow"
+                android:scaleType="fitXY"
+                android:adjustViewBounds="true"
+                />
+
+            <TextView
+                android:id="@+id/country"
+                android:layout_alignTop="@id/label_country"
+                android:layout_toLeftOf="@id/country_change_img"
+                android:layout_toStartOf="@id/country_change_img"
+                android:inputType="text"
+                android:layout_width="wrap_content"
+                android:fontFamily="sans-serif-condensed"
+                android:textColor="@color/caldroid_middle_gray"
+                android:layout_height="wrap_content" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/password_layout"
+            android:layout_below="@id/country_layout"
+            android:background="@color/t_darkgray"
+            android:layout_marginTop="1dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/label_password"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="7dp"
+                android:layout_marginBottom="7dp"
+                android:textColor="@color/white"
+                android:text="@string/password_label"
+                android:fontFamily="sans-serif-condensed"
+                android:textSize="16sp"/>
+
+
+            <ImageView
+                android:id="@+id/password_change_img"
+                android:layout_alignTop="@id/label_password"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:src="@drawable/rightarrow"
+                android:scaleType="fitXY"
+                android:adjustViewBounds="true"
+                />
+
+            <TextView
+                android:id="@+id/password"
+                android:layout_alignTop="@id/label_password"
+                android:layout_toLeftOf="@id/password_change_img"
+                android:layout_toStartOf="@id/password_change_img"
+                android:inputType="textPassword"
+                android:layout_width="wrap_content"
+                android:fontFamily="sans-serif-condensed"
+                android:textColor="@color/caldroid_middle_gray"
+                android:layout_height="wrap_content" />
+
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/button_apply"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:textColor="@color/green"
+            android:fontFamily="sans-serif-condensed"
+            android:background="@color/darkgray"
+            android:textSize="15sp"
+            android:text="@string/apply_modif"
+            android:layout_marginBottom="20dp"
+            android:layout_alignParentBottom="true"
+            />
+
+    </RelativeLayout>
+
+
+
+
+</RelativeLayout>

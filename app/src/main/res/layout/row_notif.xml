@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.weball.benoit.weball.custom.CustomLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:id="@+id/five_row"
+    android:layout_height="70dp"
+    android:padding="0dp"
+    >
+
+    <ImageView
+        android:id="@+id/picture_profile"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        tools:ignore="ContentDescription"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:scaleType="fitXY"
+
+        android:layout_marginLeft="5dp"
+        android:layout_marginStart="5dp"
+        android:layout_centerVertical="true"
+        android:src="@drawable/circle"/>
+
+    <TextView
+        android:id="@+id/fullname_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/white"
+        android:textSize="12sp"
+        android:gravity="center"
+        android:layout_marginLeft="5dp"
+        android:layout_marginStart="5dp"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@id/picture_profile"
+        android:layout_toEndOf="@id/picture_profile"
+        android:textStyle="bold"
+        />
+
+    <TextView
+        android:id="@+id/message"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="12sp"
+
+        android:textColor="@android:color/white"
+        android:gravity="left"
+        android:layout_alignTop="@id/fullname_text"
+        android:layout_toRightOf="@id/fullname_text"
+        android:layout_toEndOf="@id/fullname_text"
+        android:layout_marginLeft="2dp"
+        android:layout_marginStart="2dp"
+
+        />
+
+    <ImageView
+        android:id="@+id/picture_deny"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        tools:ignore="ContentDescription"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:scaleType="fitXY"
+
+        android:layout_marginRight="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_centerVertical="true"
+        android:src="@drawable/deny_pic"/>
+
+    <ImageView
+        android:id="@+id/picture_validate"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        tools:ignore="ContentDescription"
+        android:layout_toLeftOf="@id/picture_deny"
+        android:layout_toStartOf="@id/picture_deny"
+        android:scaleType="fitXY"
+
+        android:layout_marginRight="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_centerVertical="true"
+        android:src="@drawable/validate_pic"/>
+
+
+</com.weball.benoit.weball.custom.CustomLayout>

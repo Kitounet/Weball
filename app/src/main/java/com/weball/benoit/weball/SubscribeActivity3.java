@@ -11,15 +11,21 @@ import android.widget.Toast;
 
 //import com.viewpagerindicator.TitlePageIndicator;
 
-import java.net.URL;
-import java.net.URLEncoder;
-import java.nio.charset.Charset;
+import com.weball.benoit.weball.adapter.MyPagerAdapter;
+import com.weball.benoit.weball.fragment.EmailFragment;
+import com.weball.benoit.weball.fragment.InformationFragment;
+import com.weball.benoit.weball.fragment.PasswordFragment;
+import com.weball.benoit.weball.fragment.ProfilePictureFragment;
+import com.weball.benoit.weball.fragment.SubscribeSuccessFragment;
+import com.weball.benoit.weball.requestClass.UserInfo;
+import com.weball.benoit.weball.requestClass.user;
+import com.weball.benoit.weball.service.ServiceFactory;
+import com.weball.benoit.weball.service.WeballService;
+
 import java.util.HashMap;
 import java.util.List;
 import java.util.Vector;
 
-import retrofit.mime.TypedByteArray;
-import retrofit.mime.TypedInput;
 import rx.Subscriber;
 import rx.android.schedulers.AndroidSchedulers;
 import rx.schedulers.Schedulers;
@@ -31,12 +37,11 @@ public class SubscribeActivity3 extends FragmentActivity implements EmailFragmen
         ProfilePictureFragment.onTextViewListener4, SubscribeSuccessFragment.onTextViewListener5 {
     private PagerAdapter    mPagerAdapter;
     protected ViewPager     pager;
-    private String          login;
     private String          email;
-    private String          firstname;
-    private String          lastname;
+    private String          fullname;
     private String          birthday;
     private String          password;
+    private String          photo;
     //private long char          photo;
     private int             globalnb;
 
@@ -49,8 +54,9 @@ public class SubscribeActivity3 extends FragmentActivity implements EmailFragmen
 
         fragments.add(Fragment.instantiate(this, EmailFragment.class.getName()));
         fragments.add(Fragment.instantiate(this, InformationFragment.class.getName()));
-        fragments.add(Fragment.instantiate(this, PasswordFragment.class.getName()));
         fragments.add(Fragment.instantiate(this, ProfilePictureFragment.class.getName()));
+        fragments.add(Fragment.instantiate(this, PasswordFragment.class.getName()));
+
         fragments.add(Fragment.instantiate(this, SubscribeSuccessFragment.class.getName()));
 
         this.mPagerAdapter = new MyPagerAdapter(super.getSupportFragmentManager(), fragments);
@@ -66,25 +72,32 @@ public class SubscribeActivity3 extends FragmentActivity implements EmailFragmen
         globalnb = nb;
         switch (nb){
             case 1:
-                login = infos.get(0).toString();
-                Log.d("TESSST", login);
-                email = infos.get(1).toString();
+                email = infos.get(0).toString();
                 pager.setCurrentItem(nb);
                 break;
             case 2:
-                firstname = infos.get(0).toString();
-                lastname = infos.get(1).toString();
-                birthday = infos.get(2).toString();
+                fullname = infos.get(0).toString();
+                birthday = infos.get(1).toString();
                 pager.setCurrentItem(nb);
                 break;
             case 3:
-                password = infos.get(0).toString();
+                photo = infos.get(0).toString();
                 pager.setCurrentItem(nb);
                 break;
             case 4:
-//                photo = infos.get(0).toString();
-                String photo = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOgAAAE1CAIAAABiHDtqAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbW";
-                user obj = new user(login, email, password, firstname, lastname, birthday, photo);
+                password = infos.get(0).toString();
+                String photoTest = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOgAAAE1CAIAAABiHDtqAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbW";
+                Log.d("TEST", email);
+                Log.d("TEST", email);
+                Log.d("TEST", email);
+                Log.d("TEST", email);
+                Log.d("TEST", email);Log.d("TEST", email);
+                Log.d("TEST", email);
+                Log.d("TEST", email);
+                Log.d("TEST", email);
+                Log.d("TEST", email);
+
+                user obj = new user(email, password, fullname, birthday);
                 HashMap<String, user> tosend = new HashMap<String, user>();
                 tosend.put("user", obj);
                 pager.setCurrentItem(globalnb);
@@ -104,18 +117,13 @@ public class SubscribeActivity3 extends FragmentActivity implements EmailFragmen
                             @Override
                             public final void onError(Throwable e) {
                                 Log.e("Weball", e.getMessage());
-                                showResult("Votre compte n'a pas été crée");
                             }
 
                             @Override
                             public final void onNext(UserInfo response) {
-                                if (!response.getFirstName().equals("")) {
-                                    Log.d("TEST", response.getFirstName());
+                                if (response != null) {
+                                    Log.d("TEST", response.getEmail());
                                     pager.setCurrentItem(globalnb);
-                                }
-                                else {
-                                    Log.d("TEST", response.getMessage());
-                                    showResult("Votre compte n'a pas été crée" + response.getMessage());
                                 }
                             }
                         });
@@ -132,7 +140,7 @@ public class SubscribeActivity3 extends FragmentActivity implements EmailFragmen
 
     @Override
     public void ComeBackHome() {
-        Intent intent = new Intent(SubscribeActivity3.this, HomeActivity.class);
+        Intent intent = new Intent(SubscribeActivity3.this, loginPageActivity.class);
         startActivity(intent);
     }
 

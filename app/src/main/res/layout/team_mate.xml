@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:id="@+id/teammate_fragment"
+    android:background="@drawable/backgroundhome">
+
+    <RelativeLayout
+        android:id="@+id/list_header"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:background="@color/tab_gray">
+
+        <ImageView
+            android:id="@+id/prev"
+            android:layout_centerVertical="true"
+            android:layout_alignParentTop="true"
+            android:layout_gravity="start"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/leftarrow"
+            android:adjustViewBounds="true"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:text="@string/teammate_title"
+            android:textSize="20sp"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:fontFamily="sans-serif-condensed"
+
+            />
+
+        <ImageView
+            android:id="@+id/search_image"
+            android:layout_width="20dp"
+            android:layout_centerVertical="true"
+            android:layout_height="20dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:src="@drawable/searchicon"/>
+
+
+    </RelativeLayout>
+
+    <ListView
+        android:id="@+id/listView"
+        android:layout_below="@id/list_header"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        />
+
+</RelativeLayout>

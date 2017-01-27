@@ -27,12 +27,14 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/TextView0"
+            android:fontFamily="sans-serif-condensed"
+
             android:layout_centerHorizontal="true"
             android:layout_alignTop="@+id/prev"
             android:layout_gravity="center"
             android:gravity="center"
             android:textColor="@color/white"
-            android:textSize="20dp"
+            android:textSize="20sp"
             android:text="@string/subscription"/>
     </RelativeLayout>
 
@@ -41,7 +43,7 @@
         android:layout_width="150dp"
         android:layout_height="150dp"
         android:adjustViewBounds="true"
-        android:src="@drawable/add_photo"
+        android:src="@drawable/add_photo_picture"
         android:layout_below="@+id/layout1"
         android:layout_marginTop="120dp"
         android:layout_centerHorizontal="true"
@@ -55,10 +57,12 @@
         android:id="@+id/TextView1"
         android:layout_below="@+id/add_picture"
         android:layout_centerHorizontal="true"
+        android:fontFamily="sans-serif-condensed"
+
         android:layout_gravity="center"
         android:gravity="center"
         android:layout_marginTop="80dp"
-        android:textSize="30dp"
+        android:textSize="30sp"
         android:textColor="@color/white"
         android:text="@string/askprofilepicture"/>
 
@@ -69,10 +73,12 @@
         android:id="@+id/TextView2"
         android:layout_gravity="center"
         android:gravity="center"
+        android:fontFamily="sans-serif-condensed"
+
         android:layout_marginBottom="40dp"
         android:layout_centerHorizontal="true"
         android:layout_alignParentBottom="true"
-        android:textSize="16dp"
+        android:textSize="14sp"
         android:textColor="@color/green"
         android:text="Suivant"/>
 

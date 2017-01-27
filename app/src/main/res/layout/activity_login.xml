@@ -1,64 +1,181 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent" android:layout_height="match_parent"
-    android:background="@drawable/wallpaper">
+    android:background="@drawable/backgroundhome">
+
+    <RelativeLayout
+        android:id="@+id/headerlayout"
+        android:layout_width="match_parent"
+        android:layout_height="100dp">
+
+        <ImageView
+            android:id="@+id/prev"
+            android:layout_marginTop="10dp"
+            android:layout_alignParentTop="true"
+            android:layout_gravity="start"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/leftarrow"
+            android:adjustViewBounds="true"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/TextView0"
+            android:layout_gravity="center"
+            android:layout_marginTop="11dp"
+            android:fontFamily="sans-serif-condensed"
+
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:text="@string/ConnectionTitle"
+            android:layout_alignTop="@+id/prev"
+            android:layout_centerHorizontal="true" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/hiddenCenter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"/>
 
     <ImageView
         android:id="@+id/logo"
-        android:layout_alignParentTop="true"
-        android:layout_marginTop="150dp"
+        android:layout_below="@id/headerlayout"
+        android:layout_marginBottom="70dp"
         android:layout_centerHorizontal="true"
-        android:layout_width="150dp"
-        android:layout_height="150dp"
+        android:layout_width="140dp"
+        android:layout_height="140dp"
         android:src="@drawable/logo_weball"
         android:adjustViewBounds="true"
         />
 
-    <LinearLayout
-        android:orientation="vertical"
+    <RelativeLayout
+        android:id="@+id/info_layout"
+        android:layout_below="@id/hiddenCenter"
         android:layout_width="match_parent"
-        android:layout_height="200dp"
-        android:background="@color/t_darkgray"
-        android:layout_alignParentBottom="true">
+        android:layout_height="wrap_content"
+>
+
+        <ImageView
+            android:id="@+id/logo_email"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/username_logo"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="5dp"/>
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
-            android:text="@string/username"
-            android:textColor="@color/white" />
+            android:text="@string/email_login"
+            android:textSize="15sp"
+            android:layout_marginLeft="5dp"
+            android:fontFamily="sans-serif-condensed"
+
+            android:textColor="@color/white"
+            android:layout_alignTop="@+id/logo_email"
+            android:layout_toRightOf="@id/logo_email"/>
 
         <EditText
             android:id="@+id/user_login"
             android:layout_height="wrap_content"
             android:layout_width="match_parent"
             android:inputType="textEmailAddress"
-            android:layout_gravity="center" />
+            android:theme="@style/MyEditTextTheme"
+            android:fontFamily="sans-serif-condensed"
+
+            android:layout_gravity="center"
+            android:textColor="@color/white"
+            android:layout_below="@id/logo_email"
+            />
+
+        <ImageView
+            android:id="@+id/logo_password"
+            android:layout_below="@id/user_login"
+            android:layout_marginTop="5dp"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/password_logo"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="5dp"/>
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
-            android:text="@string/password"
-            android:textColor="@color/white" />
+            android:text="@string/password_login"
+            android:textSize="15sp"
+            android:layout_marginLeft="5dp"
+            android:fontFamily="sans-serif-condensed"
+
+            android:textColor="@color/white"
+            android:layout_alignTop="@+id/logo_password"
+            android:layout_toRightOf="@id/logo_password"/>
 
         <EditText
             android:id="@+id/user_password"
             android:layout_height="wrap_content"
             android:layout_width="match_parent"
-            android:layout_gravity="center"
-            android:inputType="textPassword" />
+            android:inputType="textPassword"
+            android:theme="@style/MyEditTextTheme"
+            android:fontFamily="sans-serif-condensed"
 
-        <Button
-            android:id="@+id/connect"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:layout_marginTop="20dp"
             android:layout_gravity="center"
-            android:background="@color/green"
             android:textColor="@color/white"
-            android:text="@string/connecter" />
+            android:layout_below="@id/logo_password"
+            />
 
-    </LinearLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="@string/forgot_password"
+            android:textSize="13sp"
+            android:textColor="@color/white"
+            android:fontFamily="sans-serif-condensed"
+
+            android:id="@+id/forgetPassword"
+            android:layout_below="@+id/user_password"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true" />
+
+
+    </RelativeLayout>
+
+
+    <TextView
+        android:id="@+id/create_account"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:textSize="15sp"
+        android:fontFamily="sans-serif-condensed"
+        android:text="@string/create_account_tag"
+        android:layout_marginBottom="5dp"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:gravity="center"
+        />
+
+    <Button
+        android:id="@+id/connectionbutton"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_above="@id/create_account"
+        android:text="@string/ConnectionButton"
+        android:gravity="center"
+        android:textSize="13sp"
+        android:fontFamily="sans-serif-condensed"
+
+        android:background="@color/t_black"
+        android:textColor="@color/white"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="40dp"
+        />
 
 </RelativeLayout>

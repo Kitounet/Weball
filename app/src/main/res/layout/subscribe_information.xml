@@ -30,9 +30,11 @@
             android:layout_centerHorizontal="true"
             android:layout_alignTop="@+id/prev"
             android:layout_gravity="center"
+            android:fontFamily="sans-serif-condensed"
+
             android:gravity="center"
             android:textColor="@color/white"
-            android:textSize="20dp"
+            android:textSize="20sp"
             android:text="@string/subscription"/>
     </RelativeLayout>
 
@@ -41,44 +43,27 @@
         android:layout_height="wrap_content"
         android:id="@+id/TextView1"
         android:layout_below="@+id/layout1"
+        android:fontFamily="sans-serif-condensed"
+
         android:layout_centerHorizontal="true"
         android:layout_gravity="center"
         android:gravity="center"
         android:layout_marginTop="80dp"
-        android:textSize="30dp"
+        android:textSize="30sp"
         android:textColor="@color/white"
         android:text="@string/askinformation"/>
 
-    <TextView
-        android:id="@+id/textviewfirstname"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_below="@+id/TextView1"
-        android:layout_marginTop="70dp"
-        android:layout_gravity="center"
-        android:gravity="center"
-        android:text="@string/firstname"
-        android:textColor="@color/white" />
 
-    <EditText
-        android:id="@+id/user_firstname"
-        android:layout_below="@+id/textviewfirstname"
-        android:layout_centerHorizontal="true"
-        android:layout_height="wrap_content"
-        android:layout_width="300dp"
-        android:gravity="center"
-        android:textColor="@color/white"
-        android:inputType="textPersonName"
-        android:layout_gravity="center" />
 
     <TextView
         android:id="@+id/textviewlastname"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-condensed"
+        android:layout_below="@+id/TextView1"
+        android:layout_marginTop="70dp"
         android:layout_centerHorizontal="true"
         android:layout_gravity="center"
-        android:layout_below="@+id/user_firstname"
         android:gravity="center"
         android:textColor="@color/white"
         android:text="@string/lastname"/>
@@ -90,6 +75,9 @@
         android:layout_centerHorizontal="true"
         android:layout_width="300dp"
         android:layout_gravity="center"
+        android:fontFamily="sans-serif-condensed"
+        android:theme="@style/MyEditTextTheme"
+
         android:textColor="@color/white"
         android:inputType="textPersonName"
         android:gravity="center" />
@@ -99,6 +87,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/user_lastname"
+        android:fontFamily="sans-serif-condensed"
+
         android:layout_gravity="center"
         android:layout_centerHorizontal="true"
         android:gravity="center"
@@ -112,6 +102,10 @@
         android:layout_below="@+id/textviewbirthday"
         android:layout_centerHorizontal="true"
         android:layout_gravity="center"
+        android:fontFamily="sans-serif-condensed"
+        android:theme="@style/MyEditTextTheme"
+
+
         android:textColor="@color/white"
         android:textColorHint="@color/white"
         android:hint="jj/mm/aaaa"
@@ -126,9 +120,11 @@
         android:layout_gravity="center"
         android:gravity="center"
         android:layout_marginBottom="40dp"
+        android:fontFamily="sans-serif-condensed"
+
         android:layout_centerHorizontal="true"
         android:layout_alignParentBottom="true"
-        android:textSize="16dp"
+        android:textSize="14sp"
         android:textColor="@color/green"
         android:text="Suivant"/>
 

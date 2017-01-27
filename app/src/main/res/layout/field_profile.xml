@@ -1,13 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent" android:layout_height="match_parent">
+    android:id="@+id/FieldProfileFragment"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/backgroundhome">
 
     <RelativeLayout
         android:id="@+id/firstLayout"
         android:layout_width="match_parent"
-        android:layout_height="250dp"
+        android:layout_height="220dp"
         android:layout_alignParentTop="true"
-        android:background="@drawable/fields_header">
+        >
+
+        <ImageView
+            android:id="@+id/backgroundImage"
+            style="@style/BackGroundImageView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:ignore="ContentDescription" />
 
         <ImageView
             android:id="@+id/prev"
@@ -20,6 +31,19 @@
             android:adjustViewBounds="true"
             />
 
+        <ImageView
+            android:id="@+id/message_pic"
+            android:layout_marginTop="20dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/message_icon"
+            android:adjustViewBounds="true"
+            />
+
         <TextView
             android:id="@+id/five_name"
             android:layout_width="wrap_content"
@@ -27,116 +51,242 @@
             android:layout_alignParentTop="true"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="15dp"
+            android:fontFamily="sans-serif-condensed"
+
             android:gravity="center"
-            android:background="@color/t_black"
-            android:textSize="30dp"
-            android:textColor="@color/blue"
-            android:text="@string/fivename"
+            android:textSize="25sp"
+            android:textColor="@color/white"
         />
 
-        <RelativeLayout
-            android:id="@+id/field_stats"
-            android:layout_width="match_parent"
-            android:layout_height="70dp"
-            android:background="@color/t_black"
-            android:layout_centerVertical="true">
-
-            <TextView
-                android:id="@+id/middle"
-                android:layout_marginTop="5dp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textSize="20dp"
-                android:layout_centerHorizontal="true"
-                android:layout_alignParentTop="true"
-                android:layout_above="@+id/middle_bar"
-                />
-
-            <TextView
-                android:id="@+id/waiting_matchs"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_toRightOf="@+id/middle"
-                android:layout_alignTop="@+id/middle"
-                android:text="@string/waiting_match"
-                android:gravity="center"
-                android:layout_marginLeft="15dp"
-                android:textColor="@color/light_gray"
-                android:textSize="12dp"
-                />
-
-            <TextView
-                android:id="@+id/matchs_done"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_toLeftOf="@+id/middle"
-                android:layout_alignTop="@+id/middle"
-                android:text="@string/matchs_done"
-                android:gravity="center"
-                android:layout_marginRight="15dp"
-                android:textColor="@color/light_gray"
-                android:textSize="12dp"
-                />
-
-            <TextView
-                android:id="@+id/middle_bar"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="|"
-                android:textColor="@color/white"
-                android:textSize="30dp"
-                android:layout_marginBottom="5dp"
-                android:layout_alignParentBottom="true"
-                android:layout_centerHorizontal="true"
-                />
-
-            <TextView
-                android:id="@+id/number_waiting"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_toRightOf="@+id/middle_bar"
-                android:layout_alignTop="@+id/middle_bar"
-                android:text="999"
-                android:gravity="center"
-                android:layout_marginLeft="15dp"
-                android:textColor="@color/white"
-                android:textSize="30dp"
-                />
-
-            <TextView
-                android:id="@+id/number_matchs"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_toLeftOf="@+id/middle_bar"
-                android:layout_alignTop="@+id/middle_bar"
-                android:text="999"
-                android:gravity="center"
-                android:layout_marginRight="15dp"
-                android:textColor="@color/white"
-                android:textSize="30dp"
-                />
-
-
-        </RelativeLayout>
 
         <Button
+            android:id="@+id/reservate"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_alignParentBottom="true"
+            android:fontFamily="sans-serif-condensed"
+
+            android:layout_marginBottom="5dp"
+            android:textSize="15sp"
+            android:text="@string/reservate"
+            android:layout_marginRight="10dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:textColor="@color/white"
+            android:background="@color/t_apple_green"/>
+
+
+        <TextView
+            android:id="@+id/matchs_done"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
-            android:layout_marginBottom="20dp"
-            android:textSize="15dp"
-            android:text="@string/reservate"
-            android:layout_centerHorizontal="true"
+            android:fontFamily="sans-serif-condensed"
+
+            android:text="@string/matchs_done"
+            android:gravity="center"
             android:textColor="@color/white"
-            android:background="@color/t_black"/>
+            android:textSize="12sp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="5dp"
+            android:layout_alignLeft="@+id/number_matchs"
+            android:layout_alignStart="@+id/number_matchs" />
 
-        </RelativeLayout>
+        <TextView
+            android:id="@+id/number_matchs"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-condensed"
 
-    <ListView
-        android:id="@+id/listView"
-        android:layout_below="@+id/firstLayout"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:layout_above="@id/matchs_done"
+            android:layout_marginBottom="5dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginLeft="17dp"
+            android:layout_marginStart="17dp" />
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/layoutHours"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/firstLayout"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <TextView
+            android:id="@+id/HoursTextView"
+            android:layout_marginTop="5dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginLeft="5dp"
+            android:fontFamily="sans-serif-condensed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/hours_text"
+            android:textColor="@color/green"
+            android:textSize="12sp"
+            />
+
+
+        <ScrollView
+            android:layout_below="@id/HoursTextView"
+            android:layout_marginTop="5dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="50dp">
+
+            <TextView
+                android:id="@+id/realHoursTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginLeft="5dp"
+                android:fontFamily="sans-serif-condensed"
+                android:gravity="start"
+                android:textColor="@color/white"
+                android:textSize="12sp" />
+
+        </ScrollView>
+
+    </RelativeLayout>
+    
+    <RelativeLayout
+    android:id="@+id/layoutAdress"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_below="@id/layoutHours"
+    android:layout_alignParentLeft="true"
+    android:layout_alignParentStart="true">
+
+
+    <TextView
+        android:id="@+id/AddressTextView"
+        android:layout_marginTop="5dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginLeft="5dp"
+        android:fontFamily="sans-serif-condensed"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/AddressTextView"
+        android:textColor="@color/green"
+        android:textSize="12sp"
+        />
+
+    <TextView
+        android:id="@+id/realAddressTextView"
+        android:layout_width="wrap_content"
+        android:layout_below="@id/AddressTextView"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginLeft="5dp"
+        android:fontFamily="sans-serif-condensed"
+        android:gravity="left"
+        android:textColor="@color/white"
+        android:textSize="12sp"
+        />
+
+</RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/layoutPhone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/layoutAdress"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+
+        <TextView
+            android:id="@+id/PhoneTextView"
+            android:layout_marginTop="5dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginLeft="5dp"
+            android:fontFamily="sans-serif-condensed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/phoneTextView"
+            android:textColor="@color/green"
+            android:textSize="12sp"
+            />
+
+        <TextView
+            android:id="@+id/realPhonesTextView"
+            android:layout_width="wrap_content"
+            android:layout_below="@id/PhoneTextView"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginLeft="5dp"
+            android:fontFamily="sans-serif-condensed"
+            android:gravity="left"
+            android:textColor="@color/white"
+            android:textSize="12sp"
+            />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/layoutPrice"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        />
+        android:layout_below="@id/layoutPhone"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+
+        <TextView
+            android:id="@+id/PriceTextView"
+            android:layout_marginTop="5dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginLeft="5dp"
+            android:fontFamily="sans-serif-condensed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/priceTextView"
+            android:textColor="@color/green"
+            android:textSize="12sp"
+            />
+
+
+        <ScrollView
+            android:layout_below="@id/PriceTextView"
+            android:layout_marginTop="5dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/realPricesTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginLeft="5dp"
+                android:fontFamily="sans-serif-condensed"
+                android:gravity="start"
+                android:textColor="@color/white"
+                android:textSize="12sp" />
+
+        </ScrollView>
+
+    </RelativeLayout>
 
 </RelativeLayout>

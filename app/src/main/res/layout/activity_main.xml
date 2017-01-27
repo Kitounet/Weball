@@ -1,29 +1,65 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent" android:layout_height="match_parent">
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:background="@drawable/backgroundhome">
 
-    <com.daimajia.slider.library.SliderLayout
-        android:id="@+id/slider"
-        android:layout_width="match_parent"
-        android:layout_height="500dp"
-        />
-
-    <com.daimajia.slider.library.Indicators.PagerIndicator
-        android:id="@+id/custom_indicator"
+    <TextView
+        android:id="@+id/hiddenCenter"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
         />
 
     <TextView
-        android:id="@+id/start_text"
+        android:id="@+id/welcome"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:text="Commencer"
+        android:textSize="25sp"
         android:gravity="center"
-        android:textColor="@color/green"
+        android:fontFamily="sans-serif-condensed"
+
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="25dp"
+        android:textColor="@color/white"
+        android:layout_above="@id/hiddenCenter"
+        android:text="@string/welcome"/>
+
+    <TextView
+        android:id="@+id/descriptionwelcome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:fontFamily="sans-serif-condensed"
+
+        android:layout_below="@id/hiddenCenter"
+        android:layout_centerHorizontal="true"
+        android:text="@string/welcomedescription"/>
+
+    <Button
+        android:id="@+id/start_text"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:text="@string/startbutton"
+        android:gravity="center"
+        android:fontFamily="sans-serif-condensed"
+
+        android:textSize="13sp"
+        android:background="@color/t_black"
+        android:textColor="@color/white"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="40dp"
  />
+
+    <ImageView
+        android:layout_width="140dp"
+        android:layout_height="140dp"
+        android:id="@+id/imageView"
+        android:src="@drawable/logo_weball"
+        android:layout_marginBottom="43dp"
+        android:layout_above="@+id/welcome"
+        android:layout_centerHorizontal="true"
+        android:adjustViewBounds="true"
+
+        />
 
 </RelativeLayout>

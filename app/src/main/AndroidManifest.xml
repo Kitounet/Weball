@@ -1,69 +1,91 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.weball.benoit.weball">
+package="com.weball.benoit.weball">
 
-    <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.CAMERA" />
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+<uses-permission android:name="android.permission.INTERNET" />
+<uses-permission android:name="android.permission.CAMERA" />
+<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
     <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
 
-    <uses-feature
-        android:name="android.media.Image"
-        android:required="true" />
+    <permission android:name="com.weball.benoit.weball.permission.C2D_MESSAGE"
+        android:protectionLevel="signature" />
+    <uses-permission android:name="com.weball.benoit.weball.permission.C2D_MESSAGE" />
 
-         The ACCESS_COARSE/FINE_LOCATION permissions are not required to use
-         Google Maps Android API v2, but you must specify either coarse or fine
-         location permissions for the 'MyLocation' functionality. 
-    -->
-    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
-    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+<uses-feature android:name="android.media.Image" android:required="true" />
 
-    <application
-        android:allowBackup="true"
-        android:largeHeap="true"
-        android:icon="@drawable/ic_launcher"
-        android:label="@string/app_name"
-        android:theme="@style/AppTheme">
-        <activity
-            android:name=".MainActivity"
-            android:label="@string/app_name">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+The ACCESS_COARSE/FINE_LOCATION permissions are not required to use
+Google Maps Android API v2, but you must specify either coarse or fine
+location permissions for the 'MyLocation' functionality.
+-->
+<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+
+<application android:allowBackup="true" android:largeHeap="true" android:icon="@drawable/ic_launcher"
+    android:label="@string/app_name"
+
+    android:theme="@style/AppTheme">
+
+    <activity android:name=".MainActivity" android:label="@string/app_name">
+        <intent-filter>
+            <action android:name="android.intent.action.MAIN" />
+
+            <category android:name="android.intent.category.LAUNCHER" />
+        </intent-filter>
+    </activity>
+    <activity android:name=".loginPageActivity" android:label="loginPageActivity" />
+    <activity android:name=".SubscribeActivity3" android:label="SubscribeActivity3" />
+    <activity android:name=".NetworkActivity" android:label="NetworkActivity" />
+
+    <activity android:name=".CreateMatchActivity" android:label="CreateMatchActivity" />
+
+    <!--
+         The API key for Google Maps-based APIs is defined as a string resource.
+         (See the file "res/values/google_maps_api.xml").
+         Note that the API key is linked to the encryption key used to sign the APK.
+         You need a different API key for each encryption key, including the release key that is used to
+         sign the APK for publishing.
+         You can define the keys for the debug and release targets in src/debug/ and src/release/.
+     -->
+    <meta-data android:name="com.google.android.geo.API_KEY"
+        android:value="@string/google_maps_key" />
+
+    <activity android:name="com.weball.benoit.weball.MapsActivity" android:label="@string/title_activity_maps">
         </activity>
-        <activity
-            android:name=".HomeActivity"
-            android:label="HomeActivity" />
-        <activity
-            android:name=".loginPageActivity"
-            android:label="loginPageActivity" />
-        <activity
-            android:name=".ProfileActivity"
-            android:label="ProfileActivity" />
-        <activity
-            android:name=".SubscribeActivity3"
-            android:label="SubscribeActivity3" />
-        <activity
-            android:name=".NetworkActivity"
-            android:label="NetworkActivity" />
-        <!--
-             The API key for Google Maps-based APIs is defined as a string resource.
-             (See the file "res/values/google_maps_api.xml").
-             Note that the API key is linked to the encryption key used to sign the APK.
-             You need a different API key for each encryption key, including the release key that is used to
-             sign the APK for publishing.
-             You can define the keys for the debug and release targets in src/debug/ and src/release/. 
-        -->
-        <meta-data
-            android:name="com.google.android.geo.API_KEY"
-            android:value="@string/google_maps_key" />
 
-        <activity
-            android:name=".MapsActivity"
-            android:label="@string/title_activity_maps"></activity>
-    </application>
+
+    <service android:name="com.weball.benoit.weball.service.NotificationService" />
+    <receiver
+        android:name="com.google.android.gms.gcm.GcmReceiver"
+        android:exported="true"
+        android:permission="com.google.android.c2dm.permission.SEND" >
+        <intent-filter>
+            <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+            <category android:name="com.example.gcm" />
+        </intent-filter>
+    </receiver>
+    <service
+        android:name="com.weball.benoit.weball.gcm.MyGcmListenerService"
+        android:exported="false" >
+        <intent-filter>
+            <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+        </intent-filter>
+    </service>
+    <service
+        android:name="com.weball.benoit.weball.gcm.MyInstanceIDListenerService"
+        android:exported="false">
+        <intent-filter>
+            <action android:name="com.google.android.gms.iid.InstanceID" />
+        </intent-filter>
+    </service>
+
+
+</application>
 
 </manifest>
+
+
+

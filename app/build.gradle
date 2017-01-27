@@ -10,6 +10,7 @@ android {
         targetSdkVersion 23
         versionCode 1
         versionName "1.0"
+        multiDexEnabled true
     }
     buildTypes {
         release {
@@ -21,15 +22,33 @@ android {
 
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
-    //    compile 'com.github.JakeWharton:ViewPagerIndicator:2.4.1'
-    compile 'com.android.support:appcompat-v7:23.1.1'
+    compile 'com.roomorama:caldroid:3.0.1'
+
+
+    compile 'com.android.support:multidex:1.0.0'
+    compile 'com.android.support:appcompat-v7:23.4.0'
+    compile 'com.roomorama:caldroid:3.0.1'
     compile 'com.daimajia.slider:library:1.1.5'
     compile 'com.nineoldandroids:library:2.4.0'
     compile 'com.daimajia.androidanimations:library:1.0.3@aar'
     compile 'io.reactivex:rxjava:1.0.+'
     compile 'io.reactivex:rxandroid:0.23.+'
     compile 'com.squareup.retrofit:retrofit:1.9.+'
-    compile 'com.jpardogo.materialtabstrip:library:1.1.0'
-    compile 'com.google.android.gms:play-services:8.4.0'
+    compile 'com.google.android.gms:play-services:9.6.1'
     compile 'com.squareup.picasso:picasso:2.5.2'
+    compile 'com.astuetz:pagerslidingtabstrip:1.0.1'
+    compile 'com.github.lecho:hellocharts-android:v1.5.8'
+    compile 'org.lucasr.twowayview:twowayview:0.1.4'
+    compile 'com.algolia:algoliasearch-android:2.4.0@aar'
+    compile 'com.nostra13.universalimageloader:universal-image-loader:1.9.5'
+    compile 'com.google.android.gms:play-services:9.6.1'
+    compile 'com.google.android.gms:play-services-ads:9.6.1'
+    compile 'com.google.android.gms:play-services-analytics:9.6.1'
+    compile 'com.google.android.gms:play-services-location:9.6.1'
+    compile 'com.google.android.gms:play-services-auth:9.6.1'
+    compile 'com.google.firebase:firebase-core:9.6.1'
+    compile 'com.google.android.gms:play-services-fitness:9.6.1'
+    compile 'com.google.android.gms:play-services-wearable:9.6.1'
 }
+
+apply plugin: 'com.google.gms.google-services'

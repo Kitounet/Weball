@@ -4,13 +4,26 @@
     android:layout_width="match_parent" android:layout_height="match_parent"
     android:background="@color/t_white">
 
-    <fragment xmlns:android="http://schemas.android.com/apk/res/android"
+
+  <fragment xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:tools="http://schemas.android.com/tools"
         android:id="@+id/map"
         class ="com.google.android.gms.maps.SupportMapFragment"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context="com.weball.benoit.weball.MapsActivity" />
+        tools:context="com.weball.benoit.weball.MapsActivity">
+
+    <ImageView
+        android:id="@+id/button_search"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@drawable/searchblack"
+        android:layout_marginTop="20dp"
+        android:layout_gravity="right|top"
+        android:scaleType="fitXY"
+        />
+
+    </fragment>
 
 
 </RelativeLayout>
